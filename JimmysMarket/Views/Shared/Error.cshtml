@@ -1,14 +1,17 @@
 ﻿@model ErrorViewModel
 @{
     ViewData["Title"] = "Error";
+    Model.ErrorMessage ??= "Oops, we were unable to find that page.";
 }
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+<h1 class="display-1 text-danger">Error.</h1>
+<hr />
+<h2 class="display-4">@Model.ErrorMessage</h2>
+<button type="button" class="btn btn-light" onclick="history.back()">Go Back</button>
 
 @if (Model.ShowRequestId)
 {
-    <p>
-        <strong>Request ID:</strong> <code>@Model.RequestId</code>
-    </p>
+    <p class="text-muted">Request ID: @Model.RequestId</p>
 }
+
+<link rel="stylesheet" href="~/css/error.css" asp-append-version="true" />
