@@ -21,6 +21,19 @@ body {
   margin-bottom: 60px;
 }
 
-.text-red {
-    color: red !important;
+.background-red {
+    background-color: darkred;
+}
+
+.navbar-nav .nav-item .nav-link {
+    width: 80px;
+    text-align: center;
+    margin: 5px;
+    border-color: black !important;
+    padding: 10px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: black !important;
+    color: white !important;
 }
